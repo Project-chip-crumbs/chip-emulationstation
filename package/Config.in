@@ -208,12 +208,22 @@ endmenu
 
 menu "Games"
 	source "package/doom-wad/Config.in"
+	source "package/emulation-station/Config.in"
+	source "package/prboom/Config.in"
+menu "Emulators"
+	source "package/gpsp/Config.in"
+	source "package/retroarch/Config.in"
+if BR2_PACKAGE_RETROARCH
+menu "Libretro Cores"
+	source "package/armsnes/Config.in"
+endmenu
+endif
+endmenu
 	source "package/gnuchess/Config.in"
 	source "package/lbreakout2/Config.in"
 	source "package/ltris/Config.in"
 	source "package/opentyrian/Config.in"
 	source "package/opentyrian-data/Config.in"
-	source "package/prboom/Config.in"
 	source "package/rubix/Config.in"
 	source "package/sl/Config.in"
 endmenu
@@ -242,6 +252,7 @@ endif
 	source "package/fb-test-app/Config.in"
 	source "package/fbterm/Config.in"
 	source "package/fbv/Config.in"
+	source "package/freeimage/Config.in"
 	source "package/freerdp/Config.in"
 	source "package/imagemagick/Config.in"
 	source "package/linux-fusion/Config.in"
